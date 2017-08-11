@@ -1,0 +1,165 @@
+h1 {
+		text-align: center;
+		border-radius: 10px;
+		margin: auto;
+		margin-top: 1cm;
+		font-weight: bold;
+	}
+	
+	.heading{
+		 color: #ffffff;
+		  background-color: #ff6600 ; 
+		  margin: 10px 30px;
+		  text-align: center;
+		  padding: 0px 5px  30px 0;
+		  font-weight: bold;
+		  font-size: 24px;
+	}
+
+	.scoreHeader{
+		 color:#ffffff ;
+		  background-color: #2E8B57 ; 
+		  text-align: left;
+		  width: 250px;
+		  height: 30px;
+		  float: left;
+		  clear: both;
+		  margin: 10px 0 20px 30px;
+		  overflow: hidden; 
+	}	  
+	.scoreResult{
+		clear: both;
+		 color:#ffffff ;
+		  background-color: #2E8B57 ; 
+		  text-align: left;
+		  font-size: 30px;
+		  font-weight: bolder;
+		  width: 250px;
+		  height: 150px;
+		  margin: 0 0 20px 45px;
+		  float: left;
+		 
+	}
+	 
+
+	.instru-box{
+		  color: green;
+		  background-color: #ffffff ; 
+		  text-align: left;
+		  margin: 10px 0 20px 30px;
+		  padding:30px 5px  0 10px;
+
+	}
+	
+	.ranScr{
+		  color: purple ;
+		  background-color: #3CB371 ; 
+		  margin: 10px 0 20px 15px;
+		  text-align: left;
+		  font-size: 30px;
+		  font-weight: bolder;
+		  padding:20px 5px  0 10px;
+		  width: 250px;
+		  height: 150px;
+		  clear: both;
+		 
+	}
+
+	/*#instructions {
+		width: 600px;
+		height: 250px;
+		text-align: center;
+		margin: auto;
+		clear: both;
+		overflow: hidden;
+
+	} */
+
+	.winLoseBox{
+		width :120px;
+		height: 150px;
+		margin:  10px 0 20px 15px;
+		padding:20px 5px  0 10px;
+		float: left;
+		overflow: hidden;
+		color: purple;
+		background-color: #00FFFF ; 
+		text-align: left;
+
+		
+	}	
+
+	.box{
+		width :160px;
+		background-color: #ffffff;
+		margin: 0 10px 0 10px;
+		float: left;
+		overflow: hidden;
+	}	
+
+	.container{
+		margin-left: 8cm;
+	}
+	
+
+	#given{
+		width: 200px;
+		height: 100px;
+		text-align: center;
+		display: inline-block;
+	}
+	
+
+	#points {
+		width: 200px;
+		height: 100px;
+		text-align: center;
+		display: inline-block;
+	}
+	
+
+	#stats {
+		width: 200px;
+		height: 100px;
+		text-align: center;
+		display: inline-block;
+	}
+	
+
+	.crystals {
+		width: 120px;
+		height: 120px;
+		float: left;
+		overflow: hidden;
+		margin: 10px 0 20px 15px;
+
+	}
+	
+	.page-header{
+		width: 400;
+		float-left;
+	}
+
+	#crystalRow{
+		width: 920px;
+		
+	}
+	
+
+	/*#buttonReset{
+		margin-left: 15cm;
+	}*/
+
+footer{
+  background: #666666;
+  color: #ffffff;
+  padding: 30px;
+  clear: both;
+  border-top: 8px solid #4aaaa5;
+  color: #cccccc;
+  font-size: 12px;
+  text-align: center;
+  width: 100%;
+  margin-right: 0px;
+  margin-left: 0px;
+}
