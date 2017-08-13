@@ -65,15 +65,6 @@ h1 {
 		 
 	}
 
-	/*#instructions {
-		width: 600px;
-		height: 250px;
-		text-align: center;
-		margin: auto;
-		clear: both;
-		overflow: hidden;
-
-	} */
 
 	.winLoseBox{
 		width :120px;
@@ -102,12 +93,12 @@ h1 {
 	}
 	
 
-	#given{
+	/*#given{
 		width: 200px;
 		height: 100px;
 		text-align: center;
 		display: inline-block;
-	}
+	} 
 	
 
 	#points {
@@ -123,7 +114,7 @@ h1 {
 		height: 100px;
 		text-align: center;
 		display: inline-block;
-	}
+	}*/
 	
 
 	.crystals {

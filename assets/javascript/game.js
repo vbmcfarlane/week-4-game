@@ -30,95 +30,89 @@ $(document).ready(function(){
 				document.getElementById("losses").innerHTML = "Losses : " + losses;
 				document.getElementById("scoreResult").innerHTML = scoreResult;
 		 	};
-		 	getNumber(); 
-			scoreBoard();  	
 
-		// This function assigns a value to the red crystal button.
+		 	getNumber(); // Starts the game and assign new traget number
+			scoreBoard(); // Update the score board with new values. 	
+
+		// This function sums and assigns a value to the red crystal button.
 		$("#redCrystal").on('click', function(){
+			$("#redCrystal").fadeToggle(300).fadeToggle(500);
 				if (redNum){
 								scoreResult = scoreResult + redNum;
-								document.getElementById("redCrystal").innerHTML = redNum;
-								document.getElementById("scoreResult").innerHTML = scoreResult;
-								
 							}else{
 								redNum = Math.floor((Math.random() * 11) + 1);
 								scoreResult = scoreResult + redNum;
-								document.getElementById("scoreResult").innerHTML = scoreResult;
-								console.log(" scoreResult -2 :" + scoreResult);
 							}
-				console.log ("redCrystal value :" + redNum);			
-				checkScores();			
+						document.getElementById("redCrystal").innerHTML = redNum;
+						scoreBoard();	
+						checkScores();			
 		});
 
-		// This function assigns a value to the blue crystal button.	
+		// This function sums and assigns a value to the blue crystal button.	
 		$("#blueCrystal").on('click', function(){
-
+			$("#blueCrystal").fadeToggle(300).fadeToggle(500);
 				if (blueNum){
 							scoreResult = scoreResult + blueNum;
-							document.getElementById("blueCrystal").innerHTML = blueNum;
-							document.getElementById("scoreResult").innerHTML = scoreResult;
+							
 						}else{
 							blueNum = Math.floor((Math.random() * 11) + 1);
 							scoreResult = scoreResult + blueNum;
-							document.getElementById("scoreResult").innerHTML = scoreResult;
-							console.log(" scoreResult -2 :" + scoreResult);
 						}
-				console.log ("blueCrystal value:" + blueNum);		
-				checkScores();				
+						document.getElementById("blueCrystal").innerHTML = blueNum;
+						scoreBoard();	
+						checkScores();				
 
 		});
-		// This function assigns a value to the yellow crystal button.	
-		$("#yellowCrystal").on('click', function(){			
+		// This function sums assigns a value to the yellow crystal button.	
+		$("#yellowCrystal").on('click', function(){	
+			$("#yellowCrystal").fadeToggle(300).fadeToggle(500);	
 				if (yellowNum){
 						scoreResult = scoreResult + yellowNum;
-						document.getElementById("yellowCrystal").innerHTML = yellowNum;
-						document.getElementById("scoreResult").innerHTML = scoreResult;
+						
 					}else{
 						yellowNum = Math.floor((Math.random() * 11) + 1);
-						
 						scoreResult = scoreResult + yellowNum;
-						document.getElementById("scoreResult").innerHTML = scoreResult;
-						document.getElementById("scoreResult").innerHTML = scoreResult;
-					}	
-				console.log ("yellowCrystal value :" + yellowNum);
+						
+					}
+				document.getElementById("yellowCrystal").innerHTML = yellowNum;
+				scoreBoard();		
 				checkScores();	
 		});	
 		// This function assigns a value to the green crystal button.	
-		$("#greenCrystal").on('click', function(){			
+		$("#greenCrystal").on('click', function(){	
+			$("#greenCrystal").fadeToggle(300).fadeToggle(500);	
 				if (greenNum){
 								scoreResult = scoreResult + yellowNum;
-								document.getElementById("greenCrystal").innerHTML = greenNum;
-								document.getElementById("scoreResult").innerHTML = scoreResult;
+								
 							}else{
 								greenNum = Math.floor((Math.random() * 11) + 1);
 								scoreResult = scoreResult + greenNum;
-								document.getElementById("scoreResult").innerHTML = scoreResult;
-								document.getElementById("scoreResult").innerHTML = scoreResult;
+								
 							}
-				console.log ("greenCrystal value :" + greenNum);			
+				document.getElementById("greenCrystal").innerHTML = greenNum;
+				scoreBoard();			
 				checkScores();				
 		});
 
-
+		// This function checks the scoreResult against the targetScore to determine win or loss.	
 		function checkScores(){
 							if (scoreResult > targetScore){
-								console.log( targetScore + " <loss> " + scoreResult)
 								losses++;
+								console.log( targetScore + " <loss> " + scoreResult);
+								scoreBoard();
 								$("#losses").html('Losses: ' + losses);
+								alert("Sorry, You've LOSS!!. ("  + scoreResult + " is over the target " + targetScore +") Try Again")
 								resetGame();  
 								
 							} else  if (scoreResult == targetScore){
+								wins++;
 								console.log( targetScore + " <win> " + scoreResult)
-									wins++;
 									$("#wins").html('Wins: ' + wins);
+									alert("Well Done, You've WON!!.( " + targetScore + " is equal to " + scoreResult + ") Try Again" )
 									resetGame();
 							} else {}
-					
-
-							
-				
 		} // closeof function checkScores
-
+		// This function reset the variables except wins and losses for a new game event.
 		function resetGame () { 
 							blueNum = 0;
 						    greenNum = 0;
@@ -126,9 +120,7 @@ $(document).ready(function(){
 							yellowNum = 0;
 						    scoreResult=0;
 							targetScore = 0;
-							getNumber();
-							scoreBoard(); 
-		}
-
-
+							getNumber(); // Restart the game and assigns new traget number
+							scoreBoard(); // Update the score board with new values.
+		}// closeof function resetGame
 	});
