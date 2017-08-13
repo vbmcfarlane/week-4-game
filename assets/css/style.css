@@ -80,42 +80,12 @@ h1 {
 		
 	}	
 
-	.box{
-		width :160px;
-		background-color: #ffffff;
-		margin: 0 10px 0 10px;
-		float: left;
-		overflow: hidden;
-	}	
 
 	.container{
 		margin-left: 8cm;
 	}
 	
 
-	/*#given{
-		width: 200px;
-		height: 100px;
-		text-align: center;
-		display: inline-block;
-	} 
-	
-
-	#points {
-		width: 200px;
-		height: 100px;
-		text-align: center;
-		display: inline-block;
-	}
-	
-
-	#stats {
-		width: 200px;
-		height: 100px;
-		text-align: center;
-		display: inline-block;
-	}*/
-	
 
 	.crystals {
 		width: 120px;
@@ -123,7 +93,6 @@ h1 {
 		float: left;
 		overflow: hidden;
 		margin: 10px 0 20px 15px;
-
 	}
 	
 	.page-header{
@@ -137,9 +106,6 @@ h1 {
 	}
 	
 
-	/*#buttonReset{
-		margin-left: 15cm;
-	}*/
 
 footer{
   background: #666666;

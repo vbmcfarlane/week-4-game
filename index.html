@@ -26,22 +26,24 @@
 	
 	<body background="../week-4-game/assets/images/bkgnd-crystal.jpg">
 	<div class= "row" >
-		<div class="col-md-4 heading">
+		<div class="  col-sm-5 col-md-4 col-lg-3 heading">
 		  <h1>Crystal Collector!</h1>
 		</div>
-		<div class="col-md-8"> </div>
+		
     </div>
 		 
 		<!-- *************  -->
 
 	<div class="row">	
-		<div class="col-md-6 instru-box">	
+		<div class="col-xs-8 col-sm-6 col-md-6 instru-box">	
 			<div >
 			    <p>You will be given a random number at the start of the game.</p>
 			    
 			    <p> There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score. </p>
 			    
-			    <p> You win the game by matching your total score to the random number, <br /> you lose the game if your score goes above the random number. </p>
+			    <p> You win the game by matching your total score to the random number. <p> 
+
+			    <p> you lose the game if your score goes above the random number. </p>
 			 
 			    <p> The value of each crystal is hidden fron you until you click on it.</p>
 			     
@@ -49,14 +51,14 @@
 			    <br /> <br /> <br /> </p>
 			 </div>  
 		</div> <!-- close col-md-6 -->
-		<div class="col-md-6"> </div>
+		<div class="col-sm-6 col-md-6 "> </div>
     </div> <!-- close class=row -->
 </div>  <!-- close class = container -->
 <!--  ====================================================================== -->		
 
 <div class="row">
-	<div class="col-md-8">
-	  	<div class="col-md-3 ranScr" id="targetScore">
+	<div class="col-sm-8 col-md-8 ">
+	  	<div class="col-sm-3 col-md-3 ranScr" id="targetScore">
 		</div>
 	 	<div class="col-md-1 winLoseBox">
 	    	<span id="wins">Wins :  </span> <br /> <br />
@@ -68,25 +70,25 @@
 
  
 <div id="crystalRow">
-  	
-	<div type= "button" class="crystals">
-		<img src="../week-4-game/assets/images/red-crystal.jpg"  width="150" id="redCrystal">
-	</div>
-	<div type= "button" class="crystals">
-		<img src="../week-4-game/assets/images/blue-crystal.jpg" width="150" id="blueCrystal">
-	</div>
-	<div type= "button" class="crystals">
-		<img src="../week-4-game/assets/images/yellow-crystal.jpg" width="150" id="yellowCrystal">
-	</div>
-	<div type= "button" class="crystals">
-		<img src="../week-4-game/assets/images/green-crystal.jpg" width="150" id="greenCrystal">
-	</div>
-	<div class="col-md-6"> </div>
-
+  	<div class="col-xs-4 col-sm-8 col-md-8 col-lg-8" > 
+		<div type= "button" class="crystals">
+			<img src="../week-4-game/assets/images/red-crystal.jpg"  width="150" id="redCrystal">
+		</div>
+		<div type= "button" class="crystals">
+			<img src="../week-4-game/assets/images/blue-crystal.jpg" width="150" id="blueCrystal">
+		</div>
+		<div type= "button" class="crystals">
+			<img src="../week-4-game/assets/images/yellow-crystal.jpg" width="150" id="yellowCrystal">
+		</div>
+		<div type= "button" class="crystals">
+			<img src="../week-4-game/assets/images/green-crystal.jpg" width="150" id="greenCrystal">
+		</div>
+	
+</div>
 </div>
  
 <div class="row">
-	<div class= "col-md-3 scoreHeader">
+	<div class= "col-sm-3 col-md-3 scoreHeader">
     	<p>Your total score is :</p>
   		</div>
 	<div class="col-md-9"> </div>
@@ -95,7 +97,7 @@
 <div class="row">	  	
 
   	
-	  	<div class="col-md-3 scoreResult">
+	  	<div class="col-sm-3 col-md-3 scoreResult">
 	    	<h3 id="scoreResult"></h3>
 	  	</div class="col-md-2" id=scoreResult></div>
 
