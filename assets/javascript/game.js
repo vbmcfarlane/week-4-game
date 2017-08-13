@@ -36,12 +36,12 @@ $(document).ready(function(){
 
 		// This function sums and assigns a value to the red crystal button.
 		$("#redCrystal").on('click', function(){
-			$("#redCrystal").fadeToggle(300).fadeToggle(500);
+			$("#redCrystal").fadeToggle(200).fadeToggle(200);
 				if (redNum){
-								scoreResult = scoreResult + redNum;
+								scoreResult += redNum;
 							}else{
 								redNum = Math.floor((Math.random() * 11) + 1);
-								scoreResult = scoreResult + redNum;
+								scoreResult += redNum;
 							}
 						document.getElementById("redCrystal").innerHTML = redNum;
 						scoreBoard();	
@@ -50,44 +50,41 @@ $(document).ready(function(){
 
 		// This function sums and assigns a value to the blue crystal button.	
 		$("#blueCrystal").on('click', function(){
-			$("#blueCrystal").fadeToggle(300).fadeToggle(500);
+			$("#blueCrystal").fadeToggle(200).fadeToggle(200);
 				if (blueNum){
-							scoreResult = scoreResult + blueNum;
-							
+							scoreResult += blueNum;
 						}else{
 							blueNum = Math.floor((Math.random() * 11) + 1);
-							scoreResult = scoreResult + blueNum;
+							scoreResult += blueNum;
 						}
 						document.getElementById("blueCrystal").innerHTML = blueNum;
 						scoreBoard();	
 						checkScores();				
-
 		});
+
 		// This function sums assigns a value to the yellow crystal button.	
 		$("#yellowCrystal").on('click', function(){	
-			$("#yellowCrystal").fadeToggle(300).fadeToggle(500);	
+			$("#yellowCrystal").fadeToggle(200).fadeToggle(200);	
 				if (yellowNum){
-						scoreResult = scoreResult + yellowNum;
+						scoreResult += yellowNum;
 						
 					}else{
 						yellowNum = Math.floor((Math.random() * 11) + 1);
-						scoreResult = scoreResult + yellowNum;
-						
+						scoreResult += yellowNum;
 					}
 				document.getElementById("yellowCrystal").innerHTML = yellowNum;
 				scoreBoard();		
 				checkScores();	
 		});	
+
 		// This function assigns a value to the green crystal button.	
 		$("#greenCrystal").on('click', function(){	
-			$("#greenCrystal").fadeToggle(300).fadeToggle(500);	
-				if (greenNum){
-								scoreResult = scoreResult + yellowNum;
-								
+			$("#greenCrystal").fadeToggle(200).fadeToggle(200);	
+				if (greenNum){  
+								scoreResult += greenNum;
 							}else{
 								greenNum = Math.floor((Math.random() * 11) + 1);
-								scoreResult = scoreResult + greenNum;
-								
+								scoreResult += greenNum;
 							}
 				document.getElementById("greenCrystal").innerHTML = greenNum;
 				scoreBoard();			
