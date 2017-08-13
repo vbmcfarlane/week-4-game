@@ -102,14 +102,13 @@ $(document).ready(function(){
 								scoreBoard();
 								$("#losses").html('Losses: ' + losses);
 								alert("Sorry, You've LOSS!!. ("  + scoreResult + " is over the target " + targetScore +") Try Again")
-								resetGame();  
-								
+								setTimeout(resetGame,3000); // pauses the games 3 secs before resetting and displays final scores. 
 							} else  if (scoreResult == targetScore){
 								wins++;
 								console.log( targetScore + " <win> " + scoreResult)
 									$("#wins").html('Wins: ' + wins);
 									alert("Well Done, You've WON!!.( " + targetScore + " is equal to " + scoreResult + ") Try Again" )
-									resetGame();
+									setTimeout(resetGame, 3000); // pauses the games 3 secs before resetting and displays final scores.
 							} else {}
 		} // closeof function checkScores
 		// This function reset the variables except wins and losses for a new game event.
@@ -123,4 +122,5 @@ $(document).ready(function(){
 							getNumber(); // Restart the game and assigns new traget number
 							scoreBoard(); // Update the score board with new values.
 		}// closeof function resetGame
+
 	});
