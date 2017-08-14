@@ -24,15 +24,39 @@ $(document).ready(function(){
 		 	};
 		
 
-		 	function scoreBoard(){  
-			
-				document.getElementById("wins").innerHTML = "Wins : " + wins;
+		 	function scoreBoard(){
+		 		$(".instru-box").hide();
+		 		$(".rules").show();
+		 	  	document.getElementById("wins").innerHTML = "Wins : " + wins;
 				document.getElementById("losses").innerHTML = "Losses : " + losses;
 				document.getElementById("scoreResult").innerHTML = scoreResult;
 		 	};
 
+		 	$(".rules").click(function(){
+		 		$(".instru-box").show();
+		 		$(".rules").hide();
+		 	})
+		 	$(".rules").hide();
 		 	getNumber(); // Starts the game and assign new traget number
-			scoreBoard(); // Update the score board with new values. 	
+			//scoreBoard(); // Update the score board with new values. 	
+
+// Making it DRY
+$(".crystal").on('click', function(){
+	var crystalId =$(this)
+			$("#redCrystal").fadeToggle(200).fadeToggle(200);
+				if (redNum){
+								scoreResult += redNum;
+							}else{
+								redNum = Math.floor((Math.random() * 11) + 1);
+								scoreResult += redNum;
+							}
+						document.getElementById("redCrystal").innerHTML = redNum;
+						scoreBoard();	
+						checkScores();			
+		});
+
+
+// end of making it DRY
 
 		// This function sums and assigns a value to the red crystal button.
 		$("#redCrystal").on('click', function(){
